@@ -5,3 +5,8 @@ block content
 	p Welcome to #{title}
 	div(ng-controller="indicatorController")
 		| {{ message }}
+		button(type="button" ng-click="throwException()") This should throw exception
+		button(type="button" ng-click="useInvalidDate()") This should show message with Invalid Date
+		button(type="button" ng-click="makeReferenceError()") This should try to use undeclared var
+		button(type="button" ng-click="requestToNothing()") This should try to make request to Null
+		button(type="button" ng-click="doUnAuthRequest()") This should try to make request QE without auth token
